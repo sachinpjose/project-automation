@@ -25,7 +25,7 @@ private = True if args.private == "y" else False
 editor = True if args.editor == "y" else False
 
 if mode == "remote":
-    remote_project(project, private)
+    project_path = remote_project(project, private)
     print("Project Setup completed.")
 else:
     project_path = local_project(project)
