@@ -18,7 +18,7 @@ create env variables
 ### Project Setup
 
 ```
-git clone "https://github.com/sachinpjose/projectInitializerAutomation.git"
+git clone "https://github.com/sachinpjose/project-automation.git"
 cd project-automation
 pip install -r requirements.txt
 
