@@ -3,7 +3,9 @@
 ## Getting Started
 To setup up this automation:
 
-Follow the below setups
+```
+Generate a github token, if you plan to setup this project in remote
+```
 
 
 ### Pre-setup
