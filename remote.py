@@ -29,10 +29,11 @@ def remote_project(project, private):
             sys.exit()
 
         commands = [f'echo "# {project}" >> README.md',
+                    f'type {os.path.join(os.getcwd(), "python_ignore_ext")} >> .gitignore',
                     'git init',
                     f'git remote add origin {github.clone}',
                     'git add *',
-                    'git commit -m "committing readme file"',
+                    'git commit -m "committing readme and .gitignore files"',
                     'git push -u origin master']
 
         os.chdir(project_path)

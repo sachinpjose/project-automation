@@ -1,6 +1,8 @@
 import sys
 import os
 
+print(os.getcwd())
+
 
 def local_project(project):
     try:
@@ -8,7 +10,6 @@ def local_project(project):
     except:
         print("Create project folder in environment variables.")
         sys.exit()
-
 
     if os.path.isdir(folder):
 
@@ -22,9 +23,10 @@ def local_project(project):
         os.mkdir(project_path)
 
         commands = [f'echo "# {project}" >> README.md',
+                    f'type {os.path.join(os.getcwd(), "python_ignore_ext")} >> .gitignore',
                     'git init',
                     'git add *',
-                    'git commit -m "committing readme file"']
+                    'git commit -m "committing readme and .gitignore files"']
 
         os.chdir(project_path)
         for c in commands:
